@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html{
+    font-family: 'Righteous', cursive;
+}
+
+.btn{
+    letter-spacing: 2px;
+}
