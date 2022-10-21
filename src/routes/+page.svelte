@@ -8,5 +8,5 @@
   <h1 class="text-4xl text-center font-poppins">
     Helps you to recall the check list. Make your day nice and useful.
   </h1>
-  <a class="btn btn-secondary capitalize" href="/home">Get started</a>
+  <a class="btn btn-secondary" href="/home">Get started</a>
 </div>
