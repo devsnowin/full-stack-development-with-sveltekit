@@ -1,10 +1,7 @@
 import { json } from "@sveltejs/kit";
-import PrismaClient from '$lib/prisma'
+import { prisma } from "$lib/prisma";
 
-// Local database
-// let todos: Todo[] = [];
-
-const prisma = new PrismaClient()
+// const prisma = new PrismaClient()
 
 export const api = async (request: Request, data?: Todo, id?: string) => {
   let body = {};
@@ -21,39 +18,31 @@ export const api = async (request: Request, data?: Todo, id?: string) => {
       body = await prisma.todo.create({
         data: {
           completed: data?.completed as boolean,
-          text: data?.text as string
-        }
-      })
+          text: data?.text as string,
+        },
+      });
       break;
 
     case "DELETE":
       status = 200;
       body = await prisma.todo.delete({
         where: {
-          id
-        }
-      })
+          id,
+        },
+      });
       break;
-    
+
     case "PATCH":
       body = await prisma.todo.update({
         where: {
-          id
+          id,
         },
         data: {
           text: data?.text,
-          completed: data?.completed
-        }
-      })
-      
-      // todos = todos.map(todo => {
-      //   if(todo.id === id && data !== undefined){
-      //     todo.text = data.text as string;
-      //     todo.completed = data.completed as boolean
-      //   }
-      //   return todo;
-      // })
-      status = 200
+          completed: data?.completed,
+        },
+      });
+      status = 200;
       break;
 
     default:
