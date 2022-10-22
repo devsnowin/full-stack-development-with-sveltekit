@@ -9,7 +9,7 @@ declare namespace App {
 }
 
 type Todo = {
-  id: number
+  id: string
   text: string;
   completed: boolean;
 };

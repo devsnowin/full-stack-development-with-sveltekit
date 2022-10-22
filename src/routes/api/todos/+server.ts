@@ -6,7 +6,7 @@ export const GET: RequestHandler = async ({ request }) => {
 };
 
 export const POST: RequestHandler = async ({ request }) => {
-  const data = await request.json();
+  const data: Todo = await request.json();
 
   return api(request, data);
 };
