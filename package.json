@@ -3,6 +3,7 @@
 	"version": "0.0.1",
 	"private": true,
 	"scripts": {
+		"predev":"prisma migrate dev",
 		"dev": "vite dev",
 		"build": "vite build",
 		"preview": "vite preview",
@@ -14,6 +15,7 @@
 		"@sveltejs/kit": "next",
 		"autoprefixer": "^10.4.12",
 		"postcss": "^8.4.18",
+		"prisma": "^4.5.0",
 		"svelte": "^3.44.0",
 		"svelte-check": "^2.7.1",
 		"svelte-preprocess": "^4.10.7",
@@ -24,6 +26,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@prisma/client": "^4.5.0",
 		"daisyui": "^2.31.0",
 		"svelte-material-icons": "^2.0.4"
 	}
