@@ -8,7 +8,6 @@
 
   async function handleSubmit() {
     const todoData = {
-      id: Date.now(),
       text: todo,
       completed: false,
     };
